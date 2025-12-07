@@ -6,7 +6,7 @@ import {
   FileText,
   Award,
   CheckCircle,
-  LogBook,
+  ClipboardList,
   Settings,
   LogOut,
   Menu,
