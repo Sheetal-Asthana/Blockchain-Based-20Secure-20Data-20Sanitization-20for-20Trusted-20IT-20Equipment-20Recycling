@@ -4,7 +4,7 @@ import {
   LayoutDashboard,
   Cpu,
   FileText,
-  Certificate,
+  Award,
   CheckCircle,
   LogBook,
   Settings,
