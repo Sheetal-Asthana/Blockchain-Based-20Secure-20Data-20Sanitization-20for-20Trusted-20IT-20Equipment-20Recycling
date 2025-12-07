@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -22,6 +25,16 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: "hsl(210 100% 97%)",
+          100: "hsl(210 100% 94%)",
+          200: "hsl(210 100% 88%)",
+          300: "hsl(210 100% 80%)",
+          400: "hsl(210 98% 70%)",
+          500: "hsl(210 98% 60%)",
+          600: "hsl(210 98% 50%)",
+          700: "hsl(210 98% 40%)",
+          800: "hsl(210 100% 30%)",
+          900: "hsl(210 100% 15%)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
