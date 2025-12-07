@@ -56,7 +56,7 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Audit Trail",
     href: "/dashboard/audit",
-    icon: <LogBook className="w-5 h-5" />,
+    icon: <ClipboardList className="w-5 h-5" />,
     roles: ["admin", "auditor"],
   },
   {
