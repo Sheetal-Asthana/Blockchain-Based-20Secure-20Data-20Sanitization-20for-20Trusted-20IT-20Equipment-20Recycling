@@ -44,7 +44,7 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Certificates",
     href: "/dashboard/certificates",
-    icon: <Certificate className="w-5 h-5" />,
+    icon: <Award className="w-5 h-5" />,
     roles: ["admin", "operator", "enterprise", "auditor"],
   },
   {
