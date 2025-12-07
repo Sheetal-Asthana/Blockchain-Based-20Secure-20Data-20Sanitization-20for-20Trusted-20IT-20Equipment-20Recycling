@@ -1,5 +1,23 @@
-import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
-import { Activity, Cpu, CheckCircle2, AlertCircle, TrendingUp } from "lucide-react";
+import {
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import {
+  Activity,
+  Cpu,
+  CheckCircle2,
+  AlertCircle,
+  TrendingUp,
+} from "lucide-react";
 import Layout from "@/components/Layout";
 
 const barData = [
@@ -109,7 +127,8 @@ export default function Dashboard() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">Dashboard</h1>
           <p className="text-muted-foreground">
-            Monitor your device sanitization activities and blockchain certifications
+            Monitor your device sanitization activities and blockchain
+            certifications
           </p>
         </div>
 
@@ -159,7 +178,10 @@ export default function Dashboard() {
             </div>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={barData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <CartesianGrid
+                  strokeDasharray="3 3"
+                  stroke="hsl(var(--border))"
+                />
                 <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" />
                 <YAxis stroke="hsl(var(--muted-foreground))" />
                 <Tooltip
@@ -171,7 +193,11 @@ export default function Dashboard() {
                   labelStyle={{ color: "hsl(var(--foreground))" }}
                 />
                 <Legend wrapperStyle={{ paddingTop: "1rem" }} />
-                <Bar dataKey="sanitized" fill={COLORS.primary} name="Sanitized" />
+                <Bar
+                  dataKey="sanitized"
+                  fill={COLORS.primary}
+                  name="Sanitized"
+                />
                 <Bar dataKey="pending" fill={COLORS.accent} name="Pending" />
               </BarChart>
             </ResponsiveContainer>
@@ -183,7 +209,9 @@ export default function Dashboard() {
               <h2 className="text-lg font-semibold text-card-foreground">
                 Sanitization Methods
               </h2>
-              <p className="text-sm text-muted-foreground">Distribution of methods used</p>
+              <p className="text-sm text-muted-foreground">
+                Distribution of methods used
+              </p>
             </div>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
@@ -266,7 +294,8 @@ export default function Dashboard() {
                             : "bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-400"
                         }`}
                       >
-                        {activity.status === "completed" ? "✓" : "✗"} {activity.status}
+                        {activity.status === "completed" ? "✓" : "✗"}{" "}
+                        {activity.status}
                       </span>
                     </td>
                     <td className="py-3 px-4 text-sm text-muted-foreground">

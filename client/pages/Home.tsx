@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Zap, CheckCircle, Lock, BarChart3, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Zap,
+  CheckCircle,
+  Lock,
+  BarChart3,
+  Globe,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -40,8 +48,9 @@ export default function Home() {
               Blockchain-Verified IT Device Sanitization
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Secure, transparent, and certified data sanitization powered by blockchain. Track,
-              verify, and certify every device sanitization with immutable records.
+              Secure, transparent, and certified data sanitization powered by
+              blockchain. Track, verify, and certify every device sanitization
+              with immutable records.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/login">
@@ -83,8 +92,8 @@ export default function Home() {
             Comprehensive Device Sanitization Platform
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-            A complete solution for managing, tracking, and certifying IT device sanitization
-            with blockchain-backed verification.
+            A complete solution for managing, tracking, and certifying IT device
+            sanitization with blockchain-backed verification.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -97,7 +106,8 @@ export default function Home() {
                 Real-time Tracking
               </h3>
               <p className="text-muted-foreground">
-                Monitor device sanitization status in real-time with detailed logs and timestamps.
+                Monitor device sanitization status in real-time with detailed
+                logs and timestamps.
               </p>
             </div>
 
@@ -110,7 +120,8 @@ export default function Home() {
                 Blockchain Verification
               </h3>
               <p className="text-muted-foreground">
-                Immutable records on blockchain ensure data integrity and prevent tampering.
+                Immutable records on blockchain ensure data integrity and
+                prevent tampering.
               </p>
             </div>
 
@@ -123,7 +134,8 @@ export default function Home() {
                 Multi-Role Access
               </h3>
               <p className="text-muted-foreground">
-                Role-based access control for Operators, Enterprises, Auditors, and Admins.
+                Role-based access control for Operators, Enterprises, Auditors,
+                and Admins.
               </p>
             </div>
 
@@ -136,7 +148,8 @@ export default function Home() {
                 Analytics Dashboard
               </h3>
               <p className="text-muted-foreground">
-                Comprehensive metrics and charts for monitoring sanitization activities.
+                Comprehensive metrics and charts for monitoring sanitization
+                activities.
               </p>
             </div>
 
@@ -149,7 +162,8 @@ export default function Home() {
                 Certificate Management
               </h3>
               <p className="text-muted-foreground">
-                Generate, manage, and verify digital certificates for completed sanitizations.
+                Generate, manage, and verify digital certificates for completed
+                sanitizations.
               </p>
             </div>
 
@@ -162,7 +176,8 @@ export default function Home() {
                 Audit Trail
               </h3>
               <p className="text-muted-foreground">
-                Complete audit logs of all activities for compliance and accountability.
+                Complete audit logs of all activities for compliance and
+                accountability.
               </p>
             </div>
           </div>
@@ -184,15 +199,21 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Log sanitization activities</span>
+                  <span className="text-muted-foreground">
+                    Log sanitization activities
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Upload evidence and logs</span>
+                  <span className="text-muted-foreground">
+                    Upload evidence and logs
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Track device status</span>
+                  <span className="text-muted-foreground">
+                    Track device status
+                  </span>
                 </li>
               </ul>
             </div>
@@ -204,15 +225,21 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Manage device inventory</span>
+                  <span className="text-muted-foreground">
+                    Manage device inventory
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Monitor sanitization processes</span>
+                  <span className="text-muted-foreground">
+                    Monitor sanitization processes
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Download certificates</span>
+                  <span className="text-muted-foreground">
+                    Download certificates
+                  </span>
                 </li>
               </ul>
             </div>
@@ -224,15 +251,21 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Review audit trails</span>
+                  <span className="text-muted-foreground">
+                    Review audit trails
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Verify certificates</span>
+                  <span className="text-muted-foreground">
+                    Verify certificates
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Access compliance reports</span>
+                  <span className="text-muted-foreground">
+                    Access compliance reports
+                  </span>
                 </li>
               </ul>
             </div>
@@ -244,15 +277,21 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Manage users and roles</span>
+                  <span className="text-muted-foreground">
+                    Manage users and roles
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Configure system settings</span>
+                  <span className="text-muted-foreground">
+                    Configure system settings
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Monitor platform health</span>
+                  <span className="text-muted-foreground">
+                    Monitor platform health
+                  </span>
                 </li>
               </ul>
             </div>
@@ -267,7 +306,8 @@ export default function Home() {
             Ready to Secure Your IT Assets?
           </h2>
           <p className="text-lg opacity-90 mb-8">
-            Join enterprises worldwide in using blockchain-verified device sanitization.
+            Join enterprises worldwide in using blockchain-verified device
+            sanitization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/signup">
@@ -310,40 +350,62 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-card-foreground mb-4">Product</h4>
+              <h4 className="font-semibold text-card-foreground mb-4">
+                Product
+              </h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Security
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-card-foreground mb-4">Company</h4>
+              <h4 className="font-semibold text-card-foreground mb-4">
+                Company
+              </h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Contact
                   </a>
                 </li>
@@ -353,12 +415,18 @@ export default function Home() {
               <h4 className="font-semibold text-card-foreground mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Privacy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Terms
                   </a>
                 </li>

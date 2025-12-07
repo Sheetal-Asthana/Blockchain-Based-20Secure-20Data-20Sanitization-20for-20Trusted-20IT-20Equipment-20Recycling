@@ -8,9 +8,9 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [role, setRole] = useState<"admin" | "operator" | "enterprise" | "auditor">(
-    "operator"
-  );
+  const [role, setRole] = useState<
+    "admin" | "operator" | "enterprise" | "auditor"
+  >("operator");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -78,7 +78,11 @@ export default function Login() {
                     type="button"
                     onClick={() =>
                       setRole(
-                        option.value as "admin" | "operator" | "enterprise" | "auditor"
+                        option.value as
+                          | "admin"
+                          | "operator"
+                          | "enterprise"
+                          | "auditor",
                       )
                     }
                     className={`px-4 py-2 rounded-lg border transition-colors text-sm font-medium ${
@@ -147,7 +151,9 @@ export default function Login() {
                   type="checkbox"
                   className="w-4 h-4 rounded border-border bg-background text-primary focus:ring-2 focus:ring-primary"
                 />
-                <span className="text-sm text-muted-foreground">Remember me</span>
+                <span className="text-sm text-muted-foreground">
+                  Remember me
+                </span>
               </label>
               <Link
                 to="/forgot-password"
@@ -173,17 +179,24 @@ export default function Login() {
               Demo Credentials:
             </p>
             <p className="text-xs text-muted-foreground">
-              Email: <code className="bg-background px-1 py-0.5 rounded">demo@example.com</code>
+              Email:{" "}
+              <code className="bg-background px-1 py-0.5 rounded">
+                demo@example.com
+              </code>
             </p>
             <p className="text-xs text-muted-foreground">
-              Password: <code className="bg-background px-1 py-0.5 rounded">demo</code>
+              Password:{" "}
+              <code className="bg-background px-1 py-0.5 rounded">demo</code>
             </p>
           </div>
 
           {/* Signup Link */}
           <p className="mt-6 text-center text-sm text-muted-foreground">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-primary hover:underline font-medium">
+            <Link
+              to="/signup"
+              className="text-primary hover:underline font-medium"
+            >
               Sign up
             </Link>
           </p>

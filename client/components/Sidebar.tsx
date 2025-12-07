@@ -72,12 +72,15 @@ interface SidebarProps {
   onLogout?: () => void;
 }
 
-export default function Sidebar({ userRole = "admin", onLogout }: SidebarProps) {
+export default function Sidebar({
+  userRole = "admin",
+  onLogout,
+}: SidebarProps) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const visibleItems = NAV_ITEMS.filter((item) =>
-    item.roles.includes(userRole.toLowerCase())
+    item.roles.includes(userRole.toLowerCase()),
   );
 
   const isActive = (href: string) => location.pathname === href;
@@ -89,11 +92,7 @@ export default function Sidebar({ userRole = "admin", onLogout }: SidebarProps) 
         onClick={() => setIsOpen(!isOpen)}
         className="fixed top-4 left-4 z-40 lg:hidden p-2 rounded-lg bg-white dark:bg-sidebar border border-border dark:border-sidebar-border"
       >
-        {isOpen ? (
-          <X className="w-5 h-5" />
-        ) : (
-          <Menu className="w-5 h-5" />
-        )}
+        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
       {/* Overlay for mobile */}
@@ -108,7 +107,7 @@ export default function Sidebar({ userRole = "admin", onLogout }: SidebarProps) 
       <aside
         className={cn(
           "fixed left-0 top-0 h-screen w-64 bg-sidebar border-r border-sidebar-border transition-transform duration-200 ease-in-out z-30 lg:relative lg:translate-x-0 lg:z-0",
-          isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+          isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
         )}
       >
         {/* Logo */}
@@ -134,7 +133,7 @@ export default function Sidebar({ userRole = "admin", onLogout }: SidebarProps) 
                   "flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-colors",
                   isActive(item.href)
                     ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                    : "text-sidebar-foreground hover:bg-sidebar-accent"
+                    : "text-sidebar-foreground hover:bg-sidebar-accent",
                 )}
               >
                 {item.icon}

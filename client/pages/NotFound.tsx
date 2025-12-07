@@ -22,7 +22,8 @@ const NotFound = () => {
           </div>
           <h1 className="text-4xl font-bold text-foreground mb-2">404</h1>
           <p className="text-lg text-muted-foreground mb-8">
-            Page not found. The resource you're looking for doesn't exist or hasn't been created yet.
+            Page not found. The resource you're looking for doesn't exist or
+            hasn't been created yet.
           </p>
           <Link
             to="/dashboard"
