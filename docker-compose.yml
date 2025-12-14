@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7
+    container_name: sanitizechain-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: sanitizechain
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - sanitizechain-network
+
+  # Blockchain Node (Hardhat)
+  blockchain:
+    build:
+      context: ./blockchain
+      dockerfile: Dockerfile
+    container_name: sanitizechain-blockchain
+    restart: unless-stopped
+    ports:
+      - "8545:8545"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./blockchain:/app
+      - /app/node_modules
+    networks:
+      - sanitizechain-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sanitizechain-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - MONGODB_URI=mongodb://admin:password@mongodb:27017/sanitizechain?authSource=admin
+      - BLOCKCHAIN_RPC_URL=http://blockchain:8545
+      - FRONTEND_URL=http://localhost:3000
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - mongodb
+      - blockchain
+    networks:
+      - sanitizechain-network
+
+  # Frontend React App
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: sanitizechain-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:5000/api
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - sanitizechain-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  sanitizechain-network:
+    driver: bridge
